@@ -617,12 +617,28 @@ textarea {
 }
 
 .form-control {
-  width: 500px; 
-  height: 80px;
+  width: 31.25em; 
+  height: 5em;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+/* Mobile */
+@media (max-width: 36em) {
+  .form-control {
+    width: 20em;
+  }
+}
+
+/* Tablet */  
+@media (min-width: 36em) and (max-width: 48em) {
+  .form-control {
+    width: 18em;
+  }
+}
+
+
 
 
 .skills {
