@@ -152,6 +152,26 @@
             </p>
             <a href="./project-3.html" class="btn btn--med btn--theme dynamicBgClr">Codeflix Demo</a>
           </div>
+          <div class="projects__row-content">
+            <div class="projects__row-img-cont">
+              <img src="./assets/img/spendwise.png" alt="Software Screenshot" class="projects__row-img" loading="lazy" />
+            </div>
+            <h3 class="projects__row-content-title">SpendWise</h3>
+            <p class="projects__row-content-desc">
+              A budgeting and expense tracking App developed using Nextjs / react / tailwindcss / typescript and genkit-cli.
+            </p>
+            <a href="./project-4.html" class="btn btn--med btn--theme dynamicBgClr">SpendWise Demo</a>
+          </div>
+          <div class="projects__row-content">
+            <div class="projects__row-img-cont">
+              <img src="./assets/img/asteroids.png" alt="Software Screenshot" class="projects__row-img" loading="lazy" />
+            </div>
+            <h3 class="projects__row-content-title">Neon-Asteroid-Fury</h3>
+            <p class="projects__row-content-desc">
+              A Firebase Studio App developed using Nextjs / react / tailwindcss / typescript and genkit-cli.
+            </p>
+            <a href="./project-5.html" class="btn btn--med btn--theme dynamicBgClr">Neon-Asteroid-Fury Demo</a>
+          </div>
         </div>
       </div>
     </div>
@@ -164,7 +184,7 @@
       <h2 class="heading heading-sec heading-sec__mb-med">
         <span class="heading-sec__main">About Me</span>
         <span class="heading-sec__sub">
-          <p>I'm an Associate Consultant at CAD-IT, specializing in developing 3D Interactive technical documentation like parts catalogs, work instructions, and training materials. My strength lies in collaborating with diverse teams, including Cortona3d Support, Pre-Sales, Software Engineering and Testing teams. Enthusiastic about emerging technology, committed to ongoing learning and dedicated to delivering the client solution.
+          <p>I'm a Associate Consultant at CAD-IT, passionate about turning complex tools into practical, real-world solutions. On the technical side, I’m comfortable working with HTML5, CSS3, JavaScript, XML, and XSLT, and I use tools like Notepad++, Oxygen XML, Git, and VSCode to build and troubleshoot solutions. I’m always curious about emerging tech, love learning new things, and enjoy turning ideas into innovative solutions.
           </p>
         </span>
       </h2>
@@ -312,6 +332,31 @@
 
   <script src="./index.js"></script>
 
+  <!-- Easter Egg - Code generated from Gemini-->
+  <div id="easter-egg" style="position: absolute; display: none;">
+    <img src="./assets/svg/easter-egg.svg" alt="Easter Egg" style="width: 50px; height: 50px;">
+  </div>
+  <script>
+    const easterEgg = document.getElementById('easter-egg');
+    let eggCollected = false;
+    function showEasterEgg() {
+      if (!eggCollected) {
+        const x = Math.random() * (window.innerWidth - 50);
+        const y = Math.random() * (window.innerHeight - 50);
+        easterEgg.style.left = x + 'px';
+        easterEgg.style.top = y + 'px';
+        easterEgg.style.display = 'block';
+        easterEgg.addEventListener('click', collectEgg);
+      }
+    }
+    function collectEgg() {
+      easterEgg.style.display = 'none';
+      eggCollected = true;
+      alert('Congratulations! You found the hidden item!');
+      easterEgg.removeEventListener('click', collectEgg);
+    }
+    setTimeout(showEasterEgg, 5000); // Show after 5 seconds
+  </script>
 </body>
 <!-- Credit: https://rammaheshwari.com-->
 </html>

@@ -6,9 +6,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="description" content="The Personal Dashboard Case Study Page" />
-  <title>Personal Dashboard</title>
+  <meta name="description" content="The Netflix Clone Case Study Page" />
+  <title>SpendWise</title>
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon-16x16.png">
@@ -38,11 +37,9 @@
               Projects
             </a>
           </li>
-
           <li class="header__link-wrapper">
             <a href="./index.html#about" class="header__link">About </a>
           </li>
-
           <li class="header__link-wrapper">
             <a href="./index.html#contact" class="header__link"> Contact </a>
           </li>
@@ -69,7 +66,6 @@
             <a href="./index.html#about"> About </a>
           </li>
 
-
           <li class="header__sm-menu-link">
             <a href="./index.html#contact"> Contact </a>
           </li>
@@ -79,15 +75,14 @@
   </header>
   <section class="project-cs-hero">
     <div class="project-cs-hero__content">
-      <h1 class="heading-primary">Personal Dashboard</h1>
+      <h1 class="heading-primary">SpendWise</h1>
       <div class="project-cs-hero__info">
         <p class="text-primary">
-          A Chrome Extension that gives you an overview over the current time, how the weather is like and how Crypto is
-          performing.
+            A budgeting and expense tracking App developed using Nextjs / react / tailwindcss / typescript and genkit-cli.
         </p>
       </div>
       <div class="project-cs-hero__cta">
-        <a href="https://resilient-dashboard-efba7c.netlify.app/" class="btn btn--bg skills__highlight" target="_blank">Live Demo</a>
+        <a href="https://spend-wise-protov1.vercel.app/" class="btn btn--bg skills__highlight" target="_blank">Live Demo</a>
       </div>
     </div>
   </section>
@@ -95,37 +90,34 @@
     <div class="main-container">
       <div class="project-details__content">
         <div class="project-details__showcase-img-cont">
-          <img src="./assets/img/dashboard.gif" alt="Project Image" class="project-details__showcase-img" />
+          <img src="./assets/img/SpendWise.gif" alt="Project Image" class="project-details__showcase-img" />
         </div>
         <div class="project-details__content-main">
           <div class="project-details__desc">
             <h3 class="project-details__content-title">Project Overview</h3>
             <p class="project-details__desc-para">
-              Momentum Dashboard is a popular web app that displays useful information and tools to boost productivity.
-              The goal is to recreate the core functionality and visual design of Momentum Dashboard using HTML, CSS,
-              and Javascript.
+              This project involves building a budgeting and expense tracking app with spending categories, charts, and budget goals. Include a clean dashboard with key insights. It should include spending categories, charts, and budget goals. The app should allow users to manually add expenses or upload csv files. The app should also allow users to upload receipts, then use AI to convert the receipt into an expense entry that users can edit. Data should be stored in browser cache, with download and delete options.
             </p>
             <p class="project-details__desc-para">
-
             </p>
           </div>
           <div class="project-details__tools-used">
             <h3 class="project-details__content-title">Tools Used</h3>
             <div class="skills">
-              <div class="skills__skill skills__highlight">HTML</div>
+              <div class="skills__skill skills__highlight">NextJS</div>
+              <div class="skills__skill skills__highlight">ReactJS</div>
+              <div class="skills__skill skills__highlight">TypeScript</div>
               <div class="skills__skill skills__highlight">CSS</div>
-              <div class="skills__skill skills__highlight">JavaScript</div>
-              <div class="skills__skill skills__highlight">Vite</div>
-              <div class="skills__skill skills__highlight">VS Code</div>
+              <div class="skills__skill skills__highlight">Tailwind CSS</div>
               <div class="skills__skill skills__highlight">Git</div>
-              <div class="skills__skill skills__highlight">GitHub</div>
+              <div class="skills__skill skills__highlight">Genkit-CLI</div>
             </div>
           </div>
           <div class="project-details__links">
             <h3 class="project-details__content-title">See Live</h3>
-            <a href="https://resilient-dashboard-efba7c.netlify.app/"
-              class="btn btn--med btn--theme project-details__links-btn" target="_blank">Live Demo</a>
-            <a href="https://github.com/JavascriptDon/Javascript-Fundamentals/tree/dashboard"
+            <a href="https://spend-wise-protov1.vercel.app/" class="btn btn--med btn--theme project-details__links-btn"
+              target="_blank">Live Demo</a>
+            <a href="https://github.com/hr21don/SpendWise/tree/main"
               class="btn btn--med btn--theme-inv project-details__links-btn" target="_blank">Github</a>
           </div>
         </div>
@@ -166,30 +158,5 @@
     </div>
   </footer>
   <script src="./index.js"></script>
-    <!-- Easter Egg - Code generated from Gemini-->
-    <div id="easter-egg" style="position: absolute; display: none;">
-      <img src="./assets/svg/easter-egg.svg" alt="Easter Egg" style="width: 50px; height: 50px;">
-    </div>
-    <script>
-      const easterEgg = document.getElementById('easter-egg');
-      let eggCollected = false;
-      function showEasterEgg() {
-        if (!eggCollected) {
-          const x = Math.random() * (window.innerWidth - 50);
-          const y = Math.random() * (window.innerHeight - 50);
-          easterEgg.style.left = x + 'px';
-          easterEgg.style.top = y + 'px';
-          easterEgg.style.display = 'block';
-          easterEgg.addEventListener('click', collectEgg);
-        }
-      }
-      function collectEgg() {
-        easterEgg.style.display = 'none';
-        eggCollected = true;
-        alert('Congratulations! You found the hidden item!');
-        easterEgg.removeEventListener('click', collectEgg);
-      }
-      setTimeout(showEasterEgg, 5000); // Show after 5 seconds
-    </script>
 </body>
 </html>
