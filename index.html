@@ -324,13 +324,19 @@
         </div>
       </div>
       <div class="main-footer__lower">
-        &copy; Copyright 2024. Made by
+        &copy; Copyright <span id="year"></span>. Made by
         <a rel="noreferrer" target="_blank" href="https://hr21don.github.io/">Helitha Rupasinghe</a>
       </div>
     </div>
   </footer>
 
   <script src="./index.js"></script>
+
+  <script>
+        const yearSpan = document.getElementById('year');
+        const currentYear = new Date().getFullYear();
+        yearSpan.textContent = currentYear;
+  </script>
 
   <!-- Easter Egg - Code generated from Gemini-->
   <div id="easter-egg" style="position: absolute; display: none;">
