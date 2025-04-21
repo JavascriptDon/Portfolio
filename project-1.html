@@ -166,30 +166,5 @@
     </div>
   </footer>
   <script src="./index.js"></script>
-    <!-- Easter Egg - Code generated from Gemini-->
-    <div id="easter-egg" style="position: absolute; display: none;">
-      <img src="./assets/svg/easter-egg.svg" alt="Easter Egg" style="width: 50px; height: 50px;">
-    </div>
-    <script>
-      const easterEgg = document.getElementById('easter-egg');
-      let eggCollected = false;
-      function showEasterEgg() {
-        if (!eggCollected) {
-          const x = Math.random() * (window.innerWidth - 50);
-          const y = Math.random() * (window.innerHeight - 50);
-          easterEgg.style.left = x + 'px';
-          easterEgg.style.top = y + 'px';
-          easterEgg.style.display = 'block';
-          easterEgg.addEventListener('click', collectEgg);
-        }
-      }
-      function collectEgg() {
-        easterEgg.style.display = 'none';
-        eggCollected = true;
-        alert('Congratulations! Today, we celebrate the greatest discovery in human history — the empty tomb. The stone was rolled away not so Jesus could get out, but so we could look in and see that death had been defeated.');
-        easterEgg.removeEventListener('click', collectEgg);
-      }
-      setTimeout(showEasterEgg, 5000); // Show after 5 seconds
-    </script>
 </body>
 </html>
