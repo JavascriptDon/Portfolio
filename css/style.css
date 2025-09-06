@@ -25,6 +25,10 @@ WHY DOES NESTING CSS CLASSES WORK HERE??????
   --brown:rgba(129, 104, 8, 0.8);
   --light-brown:rgba(186, 155, 65, 0.8);
   --main-color:var(--n-purple);
+  --color_1: #333;
+  --color_2: #3498db;
+  --color_3: #999;
+  --background-color_1: white;
   margin: 0;
   padding: 0;
   box-sizing: inherit;
@@ -932,3 +936,133 @@ textarea {
   width: 100vw; /* 100% of the viewport width */
   height: 50vh;
 }/*# sourceMappingURL=style.css.map */
+
+
+/* Odd items (left side) */
+/* Even items (right side) */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #ccc;
+}
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+}
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+.timeline-item:nth-child(odd)::after {
+  right: -25px;
+}
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+.timeline-item:nth-child(even)::after {
+  left: -25px;
+}
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--background-color_1);
+  background-image: url("../assets/company/cadituk_logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 3px solid white;
+  z-index: 1;
+}
+.timeline-content {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.timeline-content .title {
+  margin-top: 0;
+  font-size: 18px;
+  color: var(--color_1);
+  text-align: left;
+}
+.timeline-content p {
+  position: relative;
+  margin: 0 0 1rem 2rem;
+  padding-left: 1rem;
+  text-align: left;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.timeline-content p::before {
+  content: "•";
+  position: absolute;
+  left: -1.5rem;
+  color: var(--color_2);
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.timeline-content .date {
+  display: block;
+  font-size: 14px;
+  color: var(--color_3);
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+.timeline-item.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media only screen and (max-width: 768px) {
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    left: 0 !important;
+    margin-bottom: 3rem;
+  }
+  .timeline-item::after {
+    top: -25px;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+  .timeline-content {
+    display: inline-block;
+    text-align: left;
+    max-width: 90%;
+    margin-top: 10px;
+    padding: 1.7rem;
+  }
+}.timeline-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+}.timeline-item.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
