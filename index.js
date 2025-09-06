@@ -1,4 +1,4 @@
-// ---
+document.addEventListener('DOMContentLoaded', () => {
 const hamMenuBtn = document.querySelector('.header__main-ham-menu-cont')
 const smallMenu = document.querySelector('.header__sm-menu')
 const headerHamMenuBtn = document.querySelector('.header__main-ham-menu')
@@ -56,3 +56,4 @@ function animateTimeline() {
 
 window.addEventListener('scroll', animateTimeline);
 window.addEventListener('load', animateTimeline);
+});
