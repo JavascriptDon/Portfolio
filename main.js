@@ -34,8 +34,8 @@ for (let i = 0; i < headerSmallMenuLinks.length; i++) {
 const headerLogoConatiner = document.querySelector('.header__logo-container')
 
 headerLogoConatiner.addEventListener('click', () => {
-  location.href = 'index.html'
-})
+  location.href = '/index.html'; // always goes to root index.html
+});
 
 
 // script.js
