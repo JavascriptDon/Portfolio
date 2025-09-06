@@ -36,3 +36,23 @@ const headerLogoConatiner = document.querySelector('.header__logo-container')
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+
+// script.js
+const items = document.querySelectorAll('.timeline-item');
+
+function isInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.top <= window.innerHeight && rect.bottom >= 0;
+}
+
+function animateTimeline() {
+  items.forEach(item => {
+    if (isInViewport(item)) {
+      item.classList.add('in-view');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateTimeline);
+window.addEventListener('load', animateTimeline);
